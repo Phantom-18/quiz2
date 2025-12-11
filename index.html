@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Application</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="login-page" class="page active">
+        <div class="container">
+            <h1>Quiz App Login</h1>
+            <div class="tabs">
+                <button id="login-tab" class="tab active">Login</button>
+                <button id="register-tab" class="tab">Register</button>
+            </div>
+            <div id="login-form" class="form active">
+                <input type="email" id="login-email" placeholder="Email" required>
+                <input type="password" id="login-password" placeholder="Password" required>
+                <button id="login-btn">Login</button>
+                <p id="login-error" class="error"></p>
+            </div>
+            <div id="register-form" class="form">
+                <input type="text" id="reg-name" placeholder="Name" required>
+                <input type="tel" id="reg-phone" placeholder="Phone Number" required>
+                <input type="text" id="reg-institute" placeholder="Institute Name" required>
+                <input type="email" id="reg-email" placeholder="Email" required>
+                <input type="password" id="reg-password" placeholder="Set Password" required>
+                <button id="register-btn">Register</button>
+                <p id="register-error" class="error"></p>
+            </div>
+        </div>
+    </div>
+
+    <div id="home-page" class="page">
+        <div class="container">
+            <h1>Welcome to Quiz App</h1>
+            <p>Select a subject to start the quiz:</p>
+            <div class="carousel">
+                <button class="subject-btn" data-subject="DBMS">DBMS</button>
+                <button class="subject-btn" data-subject="OOPS">OOPS</button>
+                <button class="subject-btn" data-subject="CN">Computer Networks</button>
+                <button class="subject-btn" data-subject="Software">Software Engineering</button>
+                <button class="subject-btn" data-subject="Aptitude">Aptitude</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="quiz-page" class="page">
+        <div class="container">
+            <h1 id="quiz-subject">Quiz</h1>
+            <div id="question-container">
+                <p id="question-text"></p>
+                <div id="options"></div>
+            </div>
+            <button id="next-btn" disabled>Next</button>
+            <button id="submit-quiz" style="display:none;">Submit Quiz</button>
+            <div id="progress">Question 1 of 10</div>
+        </div>
+    </div>
+
+    <div id="score-page" class="page">
+        <div class="container">
+            <h1>Score Card</h1>
+            <div id="score-display"></div>
+            <button id="view-answers">View Correct Answers</button>
+            <button id="exit-to-home">Exit to Home</button>
+        </div>
+    </div>
+
+    <div id="answers-page" class="page">
+        <div class="container">
+            <h1>Correct Answer Sheet</h1>
+            <div id="answers-list"></div>
+            <button id="concept-finder">Concept Finder</button>
+            <button id="back-to-score">Back to Score</button>
+        </div>
+    </div>
+
+    <div id="concept-page" class="page">
+        <div class="container">
+            <h1>Concept Finder</h1>
+            <p>Faulty areas:</p>
+            <ul id="faulty-concepts"></ul>
+            <button id="suggested-videos">Suggested Videos</button>
+            <button id="back-to-answers">Back to Answers</button>
+        </div>
+    </div>
+
+    <div id="videos-page" class="page">
+        <div class="container">
+            <h1>Suggested Videos</h1>
+            <p>Placeholder for YouTube videos covering faulty concepts.</p>
+            <button id="back-to-concept">Back to Concept Finder</button>
+        </div>
+    </div>
+
+    <script src="quiz-data.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
